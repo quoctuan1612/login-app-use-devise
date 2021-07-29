@@ -1,0 +1,27 @@
+<<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="login-form bg-light mt-4 p-4">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-floating mb-3">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', id: 'email', placeholder: 'Email' %>
+            <%= f.label :email, for: 'email' %>
+          </div>
+
+          <div class="form-floating">
+            <%= f.password_field :password, autocomplete: "current-password" , class: 'form-control', id: 'password', placeholder: 'Password' %>
+            <%= f.label :password, for: 'password' %>
+          </div>
+
+          <div class="actions text-center mt-3">
+            <%= f.submit "Log in", class: 'btn btn-success' %>
+          </div>
+        <% end %>
+        <hr class="mt-4">
+        <div class="col-12">
+          <p class="text-center mb-0"><a href="/users/password/new">Forgot Password?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
