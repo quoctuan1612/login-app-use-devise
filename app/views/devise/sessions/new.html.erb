@@ -4,8 +4,8 @@
       <div class="login-form bg-light mt-4 p-4">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-floating mb-3">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', id: 'email', placeholder: 'Email' %>
-            <%= f.label :email, for: 'email' %>
+            <%= f.text_field :login, autofocus: true, class: 'form-control', id: 'login', placeholder: 'Login' %>
+            <%= f.label :login, for: 'login' %>
           </div>
 
           <div class="form-floating">

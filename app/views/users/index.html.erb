@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Is Admin</th>
+      <th>Confirmed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr> 
+        <td><%= user.id %></td>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>       
+        <td><%= user.admin %></td>
+        <td><%= user.confirmed? %></td>
+        <td>
+          <%= link_to 'Change admin rights', change_admin_rights_users_path(:id => user.id), class: 'btn btn-success' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

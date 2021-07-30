@@ -6,8 +6,8 @@
           <%= render "devise/shared/error_messages", resource: resource %>
 
           <div class="form-floating">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', id: 'email', placeholder: 'Email' %>
-            <%= f.label :email, for: 'email' %>
+            <%= f.text_field :username, autofocus: true, class: 'form-control', id: 'username', placeholder: 'Username' %>
+            <%= f.label :username, for: 'username' %>
           </div>
 
           <% if @minimum_password_length %>
