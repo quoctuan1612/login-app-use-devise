@@ -13,6 +13,10 @@
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: 'Email' %>
           </div>
 
+          <div class=" mb-3">
+            <%= f.text_field :phone, autofocus: true, class: 'form-control', placeholder: 'Phone' %>
+          </div>
+
           <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %>

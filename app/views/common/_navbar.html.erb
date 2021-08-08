@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Home</a>
+    <% if current_user.present? %>
+      <a class="navbar-brand" href="/video">Video</a>
+    <% end %>
     <% if current_user.present? && current_user.admin %>
       <a class="navbar-brand" href="/users">User</a>
     <% end %>
